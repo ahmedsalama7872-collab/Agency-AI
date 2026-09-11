@@ -12,7 +12,7 @@ export default function Companies({dark}) {
 
       <section
         id="companies"
-        className="md:pt-[200px] pt-[50px] text-center dark:bg-black min-h-screen"
+        className="md:pt-[200px] pt-[50px] text-center dark:bg-black "
        
       >  
       <p className='main-text font-semibold text-[20px]'>Trusted by Leading Companies</p>

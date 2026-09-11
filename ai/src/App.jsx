@@ -1,10 +1,14 @@
 import React from 'react'
 import Navbar from './Navbar'
 import Services from './Services'
+import Ourworks from './Ourworks'
 import Companies from './Companies'
+import Testimonial from './Testimonial'
 import { useState } from 'react';
+import Footer from './Footer'
 import bg from './assets/bgImage2.png'
 import Home from './Home';
+import Contact from './Contact';
 
 export default function App() {
     const [dark, setDark] = useState(JSON.parse(localStorage.getItem("darkMode"))||false);
@@ -21,6 +25,10 @@ export default function App() {
   <Companies />
   <Services />
 </div>
+<Ourworks dark={dark}/>
+<Testimonial dark={dark}/>
+<Contact dark={dark}/>
+<Footer dark={dark}/>
     </div>
   )
 }
