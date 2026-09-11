@@ -5,7 +5,7 @@ import Copyright from "./Copyright";
 export default function Footer({ dark }) {
   return (
     <div className="bg-[#F9FBFF] dark:bg-gray-900 w-full">
-      <div className=" grid grid-cols-2 gap-30 w-10/12 mx-auto py-12 border-b border-gray-600 mb-4">
+      <div className=" grid md:grid-cols-2 md:gap-30 gap-5 w-10/12 mx-auto py-12 border-b border-gray-600 mb-4">
         <div>
           <img
             src={dark ? logoDark : logo}
@@ -17,7 +17,7 @@ export default function Footer({ dark }) {
             your business forward.
           </p>
 
-          <div className="w-[342px] justify-between main-text hidden lg:flex mt-16 mb-4 font-bold">
+          <div className="w-[100%] lg:w-[350px] justify-between main-text flex flex-wrap md:mt-16 mt-10 md:mb-4 gap-3 font-bold">
             <a href="#home" className="hover:underline underline-offset-4">
               Home
             </a>
