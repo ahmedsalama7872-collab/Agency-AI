@@ -18,7 +18,7 @@ export default function App() {
     localStorage.setItem("darkMode", dark);
   return (
 
-<div className={dark ? "dark" : ""}>
+<div className={dark ? "dark overflow-hidden" : "overflow-hidden"} >
 <Toaster/>
     <Navbar dark={dark} setDark={setDark} />
         <Home dark={dark} />

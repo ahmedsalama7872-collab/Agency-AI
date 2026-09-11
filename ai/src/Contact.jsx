@@ -37,7 +37,7 @@ export default function Contact() {
       className="relative flex flex-col items-center gap-7 px-4 pt-30 pb-30 z-0
 sm:px-12 1g:px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
     >
-      <h2 className="font-semibold md:text-[40px] text-[30px] mx-auto text-black dark:text-white">
+      <h2 className="font-semibold md:text-[40px] text-[24px] md:text-[30px] mx-auto text-black dark:text-white">
         Reach out to us
       </h2>
       <p className="main-text text-[20px] md:w-[600px] text-center">
@@ -55,7 +55,7 @@ sm:px-12 1g:px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
             <input
             name="name"
               type="text"
-              className="text-black outline-0 dark:text-white"
+              className="text-black outline-0 dark:text-white text-[12px] md:text-[16px]"
               placeholder="Enter your name"
               required
             />
@@ -71,7 +71,7 @@ sm:px-12 1g:px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
             <input
             name="email"
               type="text"
-              className="dark:text-white text-black outline-0"
+              className="dark:text-white text-black outline-0 text-[12px] md:text-[16px]"
               placeholder="Enter your email"
               required
             />

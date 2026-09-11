@@ -71,8 +71,8 @@ export default function Navbar({ dark, setDark }) {
         id="sideBar"
         className={
           menu
-            ? "right-[0%] h-screen w-[60%] transition-all duration-500 fixed bg-[#4F4EEB]"
-            : "transition-all duration-500 right-[-100%] h-screen w-[80%] fixed bg-amber-200"
+            ? "right-[0%] h-screen w-[60%] transition-all duration-500 fixed z-[99999999] bg-[#4F4EEB]"
+            : "transition-all duration-500 right-[-100%] h-screen w-[80%] fixed z-[99999999]"
         }
       >
         {menu ? (

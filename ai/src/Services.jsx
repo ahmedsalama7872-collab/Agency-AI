@@ -14,7 +14,7 @@ export default function Services({ dark }) {
     <div
       id="services"
       className="relative flex flex-col items-center gap-7 px-4 pt-30 pb-30 z-0
-sm : px-12 1g : px-24 x1:px-40 text-gray-700 dark: text-white"
+ md:px-24 px-10  x1:px-40 text-gray-700 dark: text-white"
     >
       <h2 className="font-semibold md:text-[40px] text-[30px] mx-auto text-black dark:text-white">
         How can we help?

@@ -10,7 +10,7 @@ export default function Ourworks({dark}) {
       <div
       id="ourWorks"
       className="relative flex flex-col items-center gap-7 px-4 pt-30 pb-30 z-0
-sm : px-12 1g : px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
+ md:px-24 px-10 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
     >
       <h2 className="font-semibold md:text-[40px] text-[30px] mx-auto text-black dark:text-white">
         Our latest work
@@ -20,7 +20,7 @@ sm : px-12 1g : px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
       </p>
 
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-14 mt-16 w-[120%] lg:w-[85%]'>
+        <div className='grid grid-cols-1 md:grid-cols-3 gap-14 mt-16 w-[100%] lg:w-[85%] mx-auto'>
 
         <div className='hover:scale-103 transition-all duration-200'>
             <img src={firstWork} alt="" />
