@@ -9,13 +9,17 @@ import Footer from './Footer'
 import bg from './assets/bgImage2.png'
 import Home from './Home';
 import Contact from './Contact';
+import {Toaster} from 'react-hot-toast'
+
 
 export default function App() {
     const [dark, setDark] = useState(JSON.parse(localStorage.getItem("darkMode"))||false);
     
     localStorage.setItem("darkMode", dark);
   return (
-     <div className={dark ? "dark" : ""}>
+
+<div className={dark ? "dark" : ""}>
+<Toaster/>
     <Navbar dark={dark} setDark={setDark} />
         <Home dark={dark} />
        <div

@@ -8,12 +8,16 @@ import menuIconDark from "./assets/menu_icon_dark.svg";
 import closeIcon from "./assets/close_icon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import {motion} from 'motion/react'
 
 export default function Navbar({ dark, setDark }) {
   const [menu, setMenu] = useState(false);
   return (
     <>
-      <div className="fixed top-0 left-0 w-full h-18 bg-white dark:bg-gray-900 z-50">
+      <motion.div
+      initial={{opacity:0,y:-50}}
+      animate={{opacity:1,y:0}}
+      transition={{duration:0.6,ease:'easeOut'}} className="fixed top-0 left-0 w-full h-18 bg-white dark:bg-gray-900 z-50">
         <div className="w-[90%] container mx-auto max-w-[1450px] h-full flex items-center justify-between">
           <img
             src={dark ? logoDark : logo}
@@ -61,7 +65,7 @@ export default function Navbar({ dark, setDark }) {
             <img src={dark ? menuIconDark : menuIcon} className="w-8" alt="" />
           </button>
         </div>
-      </div>
+      </motion.div>
 
       <div
         id="sideBar"

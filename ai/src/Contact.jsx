@@ -3,8 +3,34 @@ import mail from "./assets/email_icon.svg";
 import person from "./assets/person_icon.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRightLong } from "@fortawesome/free-solid-svg-icons";
+import toast, {Toaster} from 'react-hot-toast'
 
 export default function Contact() {
+
+    const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+    formData.append("access_key", "16cd2b81-ed7f-4000-809f-9e09003056aa");
+
+  try {
+      const response = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      body: formData
+    });
+
+    const data = await response.json();
+    if(data.success){toast.success("Thanks For Submission!")
+        event.target.reset();
+    }
+    else{
+        toast.error(data.message)
+    }
+} catch (error) {
+    toast.error(error.message)
+    
+  }
+  };
+
   return (
     <div
       id="contact"
@@ -19,7 +45,7 @@ sm:px-12 1g:px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
         together.
       </p>
 
-      <form className="mt-10 grid grid-cols-2 gap-5 lg:w-[55%] w-[95%]">
+      <form onSubmit={onSubmit} className="mt-10 grid grid-cols-2 gap-5 lg:w-[55%] w-[95%]">
         <div>
           <label className="font-bold text-[18px] text-black dark:text-white ">
             Your Name
@@ -27,6 +53,7 @@ sm:px-12 1g:px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
           <div className="h-12 rounded border mt-4 border-gray-500 flex gap-3 items-center px-3">
             <img src={person} alt="" />
             <input
+            name="name"
               type="text"
               className="text-black outline-0 dark:text-white"
               placeholder="Enter your name"
@@ -42,6 +69,7 @@ sm:px-12 1g:px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
           <div className="h-12 rounded border mt-4 border-gray-500 flex gap-3 items-center px-3">
             <img src={mail} alt="" />
             <input
+            name="email"
               type="text"
               className="dark:text-white text-black outline-0"
               placeholder="Enter your email"
@@ -56,8 +84,9 @@ sm:px-12 1g:px-24 x1:px-40 text-gray-700 dark: text-white dark:bg-black"
           </label>
           <div className="  rounded border mt-4 border-gray-500 flex gap-3 items-center px-3">
             <textarea
+            name="message"
               rows={8}
-              className=" text-black outline-0 resize-none p-4 dark:text-white"
+              className=" text-black outline-0 resize-none p-4 dark:text-white w-full"
               placeholder="Enter your message"
               required
             />

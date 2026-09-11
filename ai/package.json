@@ -15,8 +15,10 @@
     "@fortawesome/react-fontawesome": "^3.5.0",
     "@tailwindcss/vite": "^4.3.3",
     "flowbite": "^4.0.2",
+    "motion": "^13.2.0",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
+    "react-hot-toast": "^2.6.0",
     "tailwindcss": "^4.3.3"
   },
   "devDependencies": {
