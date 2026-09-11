@@ -129,6 +129,17 @@ export default function Navbar({ dark, setDark }) {
           >
             Testimonial
           </a>
+           <div
+              onClick={() => {setDark(!dark) 
+                setMenu(false)}
+              }
+              
+              className="hover:scale-105 rounded-full border-[1.5px] border-white flex justify-center items-center p-2"
+            >
+              <button>
+                <img src={dark ? sun : moon} alt="" />
+              </button>
+            </div>
         </div>
       </div>
     </>

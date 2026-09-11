@@ -26,7 +26,7 @@ export default function Services({ dark }) {
       <div className="grid md:grid-cols-2 grid-cols-1 gap-14 mt-16 w-[100%] lg:w-[85%]">
 
         {/* Advertising */}
-        <div className="w-[100%] flex h-[180px] p-2 sm:p-8 gap-5 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
+        <div className="w-[100%]  dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 border border-gray-100 dark:border-gray-70 flex h-[180px] p-2 sm:p-8 gap-5 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
           <div className="sm:w-1/3 w-3/12">
             <div className="rounded-full bg-[#F5F7FE] dark:bg-gray-500 sm:w-24 w-18 flex justify-center items-center h-18 sm:h-24">
               <div className="rounded-full bg-white sm:w-20 w-12 dark:bg-gray-900 flex justify-center items-center sm:h-20 h-12">
@@ -47,7 +47,7 @@ export default function Services({ dark }) {
         </div>
 
         {/* Content Marketing */}
-        <div className="w-[100%] flex h-[180px] p-2 sm:p-8 gap-5 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
+        <div className="w-[100%] flex h-[180px] border border-gray-100 dark:border-gray-70  dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 p-2 sm:p-8 gap-5 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
           <div className="sm:w-1/3 w-3/12">
             <div className="rounded-full bg-[#F5F7FE] dark:bg-gray-500 sm:w-24 w-18 flex justify-center items-center h-18 sm:h-24">
               <div className="rounded-full bg-white sm:w-20 w-12 dark:bg-gray-900 flex justify-center items-center sm:h-20 h-12">
@@ -68,7 +68,7 @@ export default function Services({ dark }) {
         </div>
 
         {/* Content Writing */}
-        <div className="w-[100%] flex h-[180px] p-2 sm:p-8 gap-5 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
+        <div className="w-[100%] flex h-[180px] p-2 sm:p-8 gap-5  dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 border border-gray-100 dark:border-gray-70 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
           <div className="sm:w-1/3 w-3/12">
             <div className="rounded-full bg-[#F5F7FE] dark:bg-gray-500 sm:w-24 w-18 flex justify-center items-center h-18 sm:h-24">
               <div className="rounded-full bg-white sm:w-20 w-12 dark:bg-gray-900 flex justify-center items-center sm:h-20 h-12">
@@ -89,7 +89,7 @@ export default function Services({ dark }) {
         </div>
 
         {/* Social Media */}
-        <div className="w-[100%] flex h-[180px] p-2 sm:p-8 gap-5 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
+        <div className="w-[100%] flex  h-[180px] p-2 sm:p-8 gap-5 border border-gray-100 dark:border-gray-70  dark:bg-gray-900 shadow-xl shadow-gray-100 dark:shadow-white/5 bg-white rounded-2xl dark:bg-gray-900 relative items-center group">
           <div className="sm:w-1/3 w-3/12">
             <div className="rounded-full bg-[#F5F7FE] dark:bg-gray-500 sm:w-24 w-18 flex justify-center items-center h-18 sm:h-24">
               <div className="rounded-full bg-white sm:w-20 w-12 dark:bg-gray-900 flex justify-center items-center sm:h-20 h-12">
