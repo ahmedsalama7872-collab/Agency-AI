@@ -1,10 +1,9 @@
 name: Deploy to GitHub Pages
 
-"on":
+on:
   push:
     branches:
       - main
-  workflow_dispatch:
 
 permissions:
   contents: read
@@ -12,7 +11,33 @@ permissions:
   id-token: write
 
 jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v6
+
+      - name: Setup Node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 22
+
+      - name: Install dependencies
+        working-directory: ai
+        run: npm install
+
+      - name: Build project
+        working-directory: ai
+        run: npm run build
+
+      - name: Upload build
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: ai/dist
+
   deploy:
+    needs: build
     runs-on: ubuntu-latest
 
     environment:
@@ -20,32 +45,6 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
-        with:
-          node-version: 20
-          cache: npm
-          cache-dependency-path: ai/package-lock.json
-
-      - name: Install dependencies
-        working-directory: ai
-        run: npm ci
-
-      - name: Build
-        working-directory: ai
-        run: npm run build
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v5
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
-        with:
-          path: ai/dist
-
-      - name: Deploy
+      - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
