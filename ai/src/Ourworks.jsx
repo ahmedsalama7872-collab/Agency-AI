@@ -20,7 +20,7 @@ export default function Ourworks({dark}) {
       </p>
 
 
-        <div className='grid grid-cols-1 md:grid-cols-3 gap-14 mt-16 w-[100%] lg:w-[85%] mx-auto'>
+        <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mt-16 w-[100%] lg:w-[85%] mx-auto'>
 
         <div className='hover:scale-103 transition-all duration-200'>
             <img src={firstWork} alt="" />
